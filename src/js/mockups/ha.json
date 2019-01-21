@@ -1,0 +1,29 @@
+{
+   
+    "recommendha":{
+   
+     "ME TRACKING ID": 123456,
+     "MEID": 654321,
+     "TITLE": "Have you been tested for hepatitis C?",
+     "ME TYPE CODE": null,
+     "ME IMPACT FLAG": null,
+     "SEVERITY":3,
+     "ME CHANGE DT": null,
+     "CE STATUS": null,
+     "ME EXPIRY FLAG": null
+   
+    },
+    "pasthealthaction":{
+   
+     "ME TRACKING ID": 123456,
+     "MEID": 654321,
+     "TITLE": "Have you had a Tdap vaccine? ",
+     "ME TYPE CODE": null,
+     "ME IMPACT FLAG": null,
+     "SEVERITY":null,
+     "ME CHANGE DT": null,
+     "CE STATUS": null,
+     "ME EXPIRY FLAG": null
+      
+       }
+    }

@@ -1,0 +1,172 @@
+[
+    {
+        "BehaviorId": 15,
+        "Title": "Physical Activity",
+        "BehaviorType": null,
+        "Description": "Time to move!",
+        "ImageName": "excerciseCircle@3x.png",
+        "VOWMessage": "Great choice! You want to exercise more and we can help!\\nWe know it’s easy to get overwhelmed by all the options out there. We’ve found that people are most successful when they focus on making one small change at a time.\\n Pick the exercise goal you want to tackle first:",
+        "MemberStatus": "ACTIVE",
+        "DefaultBehavior": "true",
+        "BehaviorProgress": "0%",
+        "BehaviorStartDate": "4/19/2018",
+        "BehaviorLastUpdatedDate": "4/27/2018",
+        "Source": null,
+        "Goals": [
+            {
+                "GoalId": 38,
+                "GoalTitle": "Be physically active",
+                "GoalName": "Be more active (beginner)",
+                "GoalStatus": "INACTIVE",
+                "GoalInstanceId": null,
+                "GoalStartDate": null,
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": null,
+                "EngagementIndicator": null,
+                "IsDefaultGoal": false
+            },
+            {
+                "GoalId": 15,
+                "GoalTitle": "Increase physical activity",
+                "GoalName": "Be more active (aerobic)",
+                "GoalStatus": "ACTIVE",
+                "GoalInstanceId": 142262,
+                "GoalStartDate": "2018-04-27T09:00:17.533",
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": "2018-05-03T09:00:17.533",
+                "EngagementIndicator": null,
+                "IsDefaultGoal": true
+            },
+            {
+                "GoalId": 21,
+                "GoalTitle": "Move even more",
+                "GoalName": "Get involved in a sport",
+                "GoalStatus": "INACTIVE",
+                "GoalInstanceId": null,
+                "GoalStartDate": null,
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": null,
+                "EngagementIndicator": null,
+                "IsDefaultGoal": false
+            },
+            {
+                "GoalId": 23,
+                "GoalTitle": "Do strength training",
+                "GoalName": "Do strength training",
+                "GoalStatus": "INACTIVE",
+                "GoalInstanceId": null,
+                "GoalStartDate": null,
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": null,
+                "EngagementIndicator": null,
+                "IsDefaultGoal": false
+            },
+            {
+                "GoalId": 22,
+                "GoalTitle": "Work on stretching",
+                "GoalName": "Work on flexibility and stretching",
+                "GoalStatus": "INACTIVE",
+                "GoalInstanceId": null,
+                "GoalStartDate": null,
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": null,
+                "EngagementIndicator": null,
+                "IsDefaultGoal": false
+            }
+        ]
+    },
+    {
+        "BehaviorId": 14,
+        "Title": "Healthy Eating",
+        "BehaviorType": null,
+        "Description": "Learn to eat healthier",
+        "ImageName": "healthyEatingCircle@3x.png",
+        "VOWMessage": "Great choice! You want to improve how and what you eat, and we can help! \\n We know it's not easy to make changes. You may have a greater chance of success if you set doable goals and make one small change at a time. Choose the Healthy Eating goal you want to try first:",
+        "MemberStatus": "ACTIVE",
+        "DefaultBehavior": false,
+        "BehaviorProgress": "0%",
+        "BehaviorStartDate": "3/7/2018",
+        "BehaviorLastUpdatedDate": "4/27/2018",
+        "Source": null,
+        "Goals": [
+            {
+                "GoalId": 39,
+                "GoalTitle": "Eat more vegetables",
+                "GoalName": "Eating more vegetables",
+                "GoalStatus": "INACTIVE",
+                "GoalInstanceId": null,
+                "GoalStartDate": null,
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": null,
+                "EngagementIndicator": null,
+                "IsDefaultGoal": false
+            },
+            {
+                "GoalId": 35,
+                "GoalTitle": "Eat more fruit",
+                "GoalName": "Eating more fruits",
+                "GoalStatus": "INACTIVE",
+                "GoalInstanceId": null,
+                "GoalStartDate": null,
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": null,
+                "EngagementIndicator": null,
+                "IsDefaultGoal": false
+            },
+            {
+                "GoalId": 56,
+                "GoalTitle": "Eat smaller portions",
+                "GoalName": "Eat smaller portions",
+                "GoalStatus": "INACTIVE",
+                "GoalInstanceId": null,
+                "GoalStartDate": null,
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": null,
+                "EngagementIndicator": null,
+                "IsDefaultGoal": false
+            },
+            {
+                "GoalId": 51,
+                "GoalTitle": "Eat more whole grains",
+                "GoalName": "Eat more whole grains",
+                "GoalStatus": "INACTIVE",
+                "GoalInstanceId": null,
+                "GoalStartDate": null,
+                "GoalCompletionDate": null,
+                "GoalExpirationDate": null,
+                "EngagementIndicator": null,
+                "IsDefaultGoal": false
+            }
+        ]
+    },
+    {
+        "BehaviorId": 23,
+        "Title": "Healthy Weight",
+        "BehaviorType": null,
+        "Description": "Learn to reach and maintain a healthy weight",
+        "ImageName": "veg.jpg",
+        "VOWMessage": "Great choice! You want to reach and maintain a healthy weight and we can help!\\nWe know it’s easy to get overwhelmed by all the options out there. We’ve found that people are most successful when they focus on making one small change at a time.\\n We’ll help you learn to change WHAT you eat, HOW you eat, and lead a more ACTIVE lifestyle.\\n Pick the healthy weight goal you want to tackle first:",
+        "MemberStatus": "INACTIVE",
+        "DefaultBehavior": "false",
+        "BehaviorProgress": "0%",
+        "BehaviorStartDate": "4/19/2018",
+        "BehaviorLastUpdatedDate": "4/27/2018",
+        "Source": null,
+        "Goals": []
+    },
+    {
+        "BehaviorId": 44,
+        "Title": "Manage my blood pressure",
+        "BehaviorType": null,
+        "Description": "Hypertension",
+        "ImageName": "excerciseCircle@3x.png",
+        "VOWMessage": "Great choice! You want to manage your blood pressure, and we can help! \\n We know it’s not easy to make changes. You may have a greater chance of success if you set doable goals and make one small change at a time. \\n Choose the Blood Pressure goal you want to try first:",
+        "MemberStatus": "INACTIVE",
+        "DefaultBehavior": "false",
+        "BehaviorProgress": "0%",
+        "BehaviorStartDate": "4/19/2018",
+        "BehaviorLastUpdatedDate": "4/27/2018",
+        "Source": null,
+        "Goals": []
+    }
+]

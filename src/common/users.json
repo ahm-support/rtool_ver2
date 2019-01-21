@@ -1,0 +1,24 @@
+{
+  "credendials": [
+    {
+      "email": "rbhatnagar@activehealth.net",
+      "password": "Testing123"
+    },
+    {
+      "email": "jgeethu@activehealth.net",
+      "password": "Welcome123"
+    },
+    {
+      "email": "rbhatnagar@activehealth.net",
+      "password": "Testing1"
+    },
+    {
+      "email": "rbhatnagar@activehealth.net",
+      "password": "Testing2"
+    },
+    {
+      "email": "rbhatnagar@activehealth.net",
+      "password": "Testing3"
+    }
+  ]
+}

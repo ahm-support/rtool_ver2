@@ -1,0 +1,143 @@
+.myclass {
+    color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.body-modal-open {
+    overflow: hidden;
+}
+
+.body-modal-close {
+    overflow: visible;
+}
+
+.content {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    marginRight: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.test {
+
+    align: right
+}
+
+/*
+CONSOLIDATES:
+	/global/styles/autoSuggest.css
+	/global-search/styles/globalsearch.brand3.css
+	/global-search/styles/productSearch.css
+	/global-search/styles/tiles.css  (removed)
+	/global-search/styles/siteSearch.css
+	/global-search/styles/hrStyles.css
+	/global-search/styles/skins/default.css
+	colorbox styles
+*/
+@charset "utf-8";
+/* CSS Document */
+body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, input, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
+tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, br {
+    font-family: helvetica;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: helvetica !important;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+}
+
+/* globalsearch.brand3.css ========================================= */
+body {
+    font-size: 12px;
+}
+
+.rightproduct p {
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+textarea {
+    resize: none;
+}
+
+#container2 {
+    overflow: hidden;
+    /* margon added for leftorange border */
+    margin-left: -10px;
+    position: static;
+}
+
+a, a:link, a:visited, a:active, a strong, a:link strong, a:visited strong,
+a:active strong, #container2 a:link, #container2 a:active, #container2 a:visited {
+    color: #3381B7;
+    text-decoration: none;
+}
+
+a:hover, a:hover strong, #container2 a:hover {
+    text-decoration: underline;
+}
+
+.center {
+    margin: auto;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 50%;
+}
+
+ol, ul {
+    margin: 0;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.container {
+    align: right;
+    padding: 0 0 0 40%;
+    background-color: #FFF;
+}
+
+.resultsContainer {
+    align: center;
+    padding: 0 0 0 5%;
+    background-color: #FFF;
+}
+
+.viewMore {
+    background-color: lightgrey; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    float: right;
+    position: relative;
+    right: 10%
+}
+

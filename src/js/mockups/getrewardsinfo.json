@@ -1,0 +1,20 @@
+[
+{
+    "OptedInForSweepStakes": "false",
+    "SweepstakesDonotShow": "false",
+    "SweepStakesOn": "false",
+    "RewardLevel": "1",
+    "ActivityLevel": "1",
+    "AnnualHeartsEarned":"210",
+    "LifetimeHeartsEarned": "210",
+    "HeartsBalance": "210",
+    "SweepstakesScore": "0",
+    "MaxSweepStakeScore": "0",
+    "HeartsConversionRate": "50:1",
+    "Timeframe": "none",
+    "SweepStakesEndDate": "0001-01-01T00:00:00",
+    "HeartsStartPeriod": "01/01/2019",
+    "HeartsEndPeriod": "31/12/2019"
+}
+]
+

@@ -1,0 +1,79 @@
+[
+    {
+        "HRAASSMNTID": 1801703073,
+        "DATASOURCENM": "AA",
+        "SURVEYNM": null,
+        "SURVEYSTATUS": "Y",
+        "RECORDUPDTDT": "2018-09-04T13:18:20.000Z",
+        "INSERTEDBY": "ETL_USER",
+        "VENDORSOURCENM": null,
+        "COMPLETIONDT": null,
+        "LOCATIONSOURCENM": null
+    },
+    {
+        "HRAASSMNTID": 1782890350,
+        "DATASOURCENM": "AA",
+        "SURVEYNM": "Lifestyle Coaching Healthy Eating Initial - Health Your Way Contact Assessment",
+        "SURVEYSTATUS": "Y",
+        "RECORDUPDTDT": "2018-08-03T23:38:37.110Z",
+        "INSERTEDBY": "ODS_USER",
+        "VENDORSOURCENM": "UE",
+        "COMPLETIONDT": null,
+        "LOCATIONSOURCENM": null
+    },
+    {
+        "HRAASSMNTID": 1800066860,
+        "DATASOURCENM": "AA",
+        "SURVEYNM": null,
+        "SURVEYSTATUS": "Y",
+        "RECORDUPDTDT": "2018-09-03T15:03:16.000Z",
+        "INSERTEDBY": "ETL_USER",
+        "VENDORSOURCENM": null,
+        "COMPLETIONDT": null,
+        "LOCATIONSOURCENM": null
+    },
+    {
+        "HRAASSMNTID": 1800066859,
+        "DATASOURCENM": "AA",
+        "SURVEYNM": null,
+        "SURVEYSTATUS": "Y",
+        "RECORDUPDTDT": "2018-09-03T15:03:16.000Z",
+        "INSERTEDBY": "ETL_USER",
+        "VENDORSOURCENM": null,
+        "COMPLETIONDT": null,
+        "LOCATIONSOURCENM": null
+    },
+    {
+        "HRAASSMNTID": 1818626106,
+        "DATASOURCENM": "PHR",
+        "SURVEYNM": "STANDARD XHRA",
+        "SURVEYSTATUS": "Y",
+        "RECORDUPDTDT": "2018-11-16T18:46:55.000Z",
+        "INSERTEDBY": "ETL_USER",
+        "VENDORSOURCENM": "VOYA",
+        "COMPLETIONDT": "2018-11-05T05:00:00.000Z",
+        "LOCATIONSOURCENM": null
+    },
+    {
+        "HRAASSMNTID": 1802963130,
+        "DATASOURCENM": "PHR",
+        "SURVEYNM": "STANDARD WORKSITE",
+        "SURVEYSTATUS": "Y",
+        "RECORDUPDTDT": "2018-09-06T06:30:59.000Z",
+        "INSERTEDBY": "ETL_USER",
+        "VENDORSOURCENM": "QUEST",
+        "COMPLETIONDT": "2018-08-21T05:00:00.000Z",
+        "LOCATIONSOURCENM": null
+    },
+    {
+        "HRAASSMNTID": 1649257380,
+        "DATASOURCENM": "PHR",
+        "SURVEYNM": "Default",
+        "SURVEYSTATUS": "Y",
+        "RECORDUPDTDT": "2018-12-18T18:53:54.000Z",
+        "INSERTEDBY": "ODS_USER",
+        "VENDORSOURCENM": "UE",
+        "COMPLETIONDT": "2018-07-30T21:47:07.000Z",
+        "LOCATIONSOURCENM": "MAH"
+    }
+]

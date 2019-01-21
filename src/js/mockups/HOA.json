@@ -1,0 +1,42 @@
+{
+    "HRAMEMBERSURVEY": {
+        "HRAASSMNTID": "text",
+        "MEMBERPLANID": "text",
+        "MEMBERID": "text",
+        "HRASOURCEASSMNTID": "text",
+        "DATASOURCENM": "text",
+        "SURVEYSTATUS": "text",
+        "SURVEYNM": "text",
+        "RECORDINSERTDT": "text",
+        "RECORDUPDTDT": "text",
+        "SURVEYRESPONSEDT": "text",
+        "COMPLETIONDT": "text",
+        "SURVEYDT": "text"
+    },
+    "HRAMEMBERSURVEYRESPONSE": {
+        "HRAMEMBERRESPONSESK": "text",
+        "PRIMARYMEMBERPLANID": "text",
+        "HRASOURCEANSWERID": "text",
+        "HRASOURCEQUESTIONID": "text",
+        "HRAASSMNTID": "text",
+        "DATASOURCENM": "text",
+        "HRASOURCEQUESTIONAIREID": "text",
+        "RESPONSETEXT": "text",
+        "RESPONSEVALUE": "text",
+        "RESPONSEDT": "text",
+        "INSERTEDBY": "text"
+    },
+    "HRAMEMBERSURVEYRESPONSEHIST": {
+        "HRAMEMBERRESPONSESK": "text",
+        "PRIMARYMEMBERPLANID": "text",
+        "HRASOURCEANSWERID": "text",
+        "HRASOURCEQUESTIONID": "text",
+        "HRAASSMNTID": "text",
+        "DATASOURCENM": "text",
+        "HRASOURCEQUESTIONAIREID": "text",
+        "RESPONSETEXT": "text",
+        "RESPONSEVALUE": "text",
+        "RESPONSEDT": "text",
+        "INSERTEDBY": "text"
+    }
+}

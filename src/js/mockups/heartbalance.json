@@ -1,0 +1,22 @@
+{
+    "RewardLevel": "",
+    "ActivityLevel": 1,
+    "AnnualHeartsEarned": 550,
+    "LifetimeHeartsEarned": 550,
+    "HeartsBalance": 500,
+    "SweepStakesOn": true,
+    "OptedInForSweepStakes": true,
+    "SweepstakesScore": 1,
+    "SweepstakesDonotShow": false,
+    "SweepstakesTermsAndConditions": {
+        "LinkId": "OCT2017SWEEPSTAKESLINK",
+        "TitleTextId": "OCT2017SWEEPSTAKESTITLE",
+        "DescTextId": "OCT2017SWEEPSTAKESDESC"
+    },
+    "MaxSweepStakeScore": 5,
+    "HeartsConversionRate": "50:1",
+    "Timeframe": "Monthly",
+    "SweepStakesEndDate": "2019-01-01T00:00:00",
+    "HeartsStartPeriod": "01/10/2017",
+    "HeartsEndPeriod": "31/12/2018"
+}

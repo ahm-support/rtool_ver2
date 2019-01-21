@@ -1,0 +1,16 @@
+{
+  "hostUrl": "localhost",
+  "port": "4002",
+  "appId": "testing",
+  "mahServices": {
+    "member": "/ahm/ods/getMemberDetails",
+    "Health Assessments": "/ahm/health-assessments",
+    "Health Actions": "/ahm/monitored-events",
+    "Incentive": "/ahm/incentive",
+    "Rewards":"/ahm/getReward",
+    "behaviors":"/ahm/behaviors",
+    "goals":"/ahm/goals",
+    "activities":"/ahm/activities",
+    "Trackers":"/ahm/gettrackers"
+  }
+}
