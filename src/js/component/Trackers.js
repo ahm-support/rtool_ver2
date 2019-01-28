@@ -77,28 +77,61 @@ export default class Trackers extends React.Component {
     callApi(memberPlanId) {
         //  const restURL = `http://${Config.hostUrl}:${Config.port}${Config.mahServices.member}?app-id=${Config.appId}&memberId=${memberPlanId}`;
         //returnData('fetchData', restURL).then((data) => this.setState({result: data}));
-        axios('https://api.myjson.com/bins/l5pw3')
-        .then((response) => {
+       // axios('https://api.myjson.com/bins/l5pw3')
+        returnJson("Trackers")
+        .then((response) => { 
 
-            const { keywordData } = response.data;
-            console.log("judy in trackers",keywordData);
-            const chartData = {
-              labels: keywordData.map(k => k.category),
-              datasets: [
-                {
-                  label: 'Trackers',
-                  data: keywordData.map(d => d.noOfSpectra),
-                  backgroundColor: 'blue',
-                }
-              ]
+            // this.setState({
+
+             const chartData = {
+                labels: response.map(k=> k.RECORDUPDTDT),
+                datasets: [
+                    {
+                    label: 'Trackers',
+                    data: response.map(d=> d.MEMBERREPORTEDNUMERICVALUE) ,
+                    backgroundColor: 'purple',
+                    }
+                ]
             }
-        
-            this.setState({ chartData });
+
+            const date = response.map(t=> t.MEMBERREPORTEDMEASUREMENTDT)[0];
+            
+
+             this.setState ({
+                 chartData,
+                 result:response,
+                 date
+                });
+
+                console.log("date text",response.map(t=> t.MEMBERREPORTEDMEASUREMENTDT));
+                console.log("Judy here:",date);
+             
+        // });
+        // console.log("judy in trackers",response);
+        // console.log(this.state.chartData);
+       
+            // this.setState({ charData });
         });
     }
+
+            // const { keywordData } = response.data;
+            // console.log("judy in trackers",MEMBERID);
+            // const chartData = {
+            //   labels: keywordData.map(k => k.category),
+            //   datasets: [
+            //     {
+            //       label: 'Trackers',
+            //       data: keywordData.map(d => d.noOfSpectra),
+            //       backgroundColor: 'blue',
+            //     }
+            //   ]
+            // }
+        
+
  
 
     render() {
+
         return (
             <div>
             <div  style={{ position: "relative", marginLeft:450, justifyContent:"center" , alignItems:'center', width:600, height: 550 }}>
@@ -113,20 +146,40 @@ export default class Trackers extends React.Component {
                            <Row>
                         <Col md={1}></Col>
                         <Col md={4}><Link to={{
-                            pathname: '/memberDetails',
+                            pathname: '/Trackers',
                             state: {memberPlanId: this.state.memberPlanId, type: 'return'}
                         }}><Image title="Back" src="../../../images/brokenArrowBack.jpg" style={{width: 40, height: 40}}/></Link></Col>
+                        <div style={{ position: "relative", marginLeft:700}}>
+                        <Col md={7} >
+                        <form>
+                            <label>
+                            MeasurementDate:
+                        <input type= "text" value={this.state.date}  disabled />
+                        </label>
+                        </form>
+                        </Col>
+                        </div>
                    </Row>
                    <br/>
                     <br/>
                     
-                <Bar
-                options={{
-                    responsive: true
-                }}
-                data={this.state.chartData}
-                />
+                <Bar  data={this.state.chartData}
+                options = {{
+                    title: {
+                        display: true,
+                        text:'Physical Exercise',
+                        fontsize: 25
+                    },
+                    legend:{
+                        display:true,
+                        position:'right'
+                    }
+                }
+            }/>
+              
               </div>
+              <br/>
+             <br/>
               <div style={{ position: "relative", marginLeft:450, justifyContent:"center" , alignItems:'center', width:900, height: 600 }}>
                     <Table responsive  >
                         <thead>
@@ -158,7 +211,6 @@ export default class Trackers extends React.Component {
                                     <td>{member.RECORDINSERTDT === null ? null : Moment(member.RECORDINSERTDT).format("DD/MM/YYYY")}</td>
                                     <td>{member.RECORDUPDTDT === null ? null : Moment(member.RECORDUPDTDT).format("DD/MM/YYYY")}</td>
                                     <td>{member.TRANSACTIONDT === null ? null : Moment(member.TRANSACTIONDT).format("DD/MM/YYYY")}</td>
-                                   
                                 </tr>
                                 })
                             }
