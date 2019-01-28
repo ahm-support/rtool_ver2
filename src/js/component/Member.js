@@ -9,13 +9,12 @@ import React from 'react';
 _ = require('lodash');
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import NavBar from "./NavBar";
-import Pagination from "react-js-pagination";
-import { Navbar, NavItem, NavbarBrand, Nav, NavDropdown, MenuItem, Table, Grid, Col, Row, Button } from 'react-bootstrap';
-import View from './data/DataView';
-import Config from '../../common/config.json';
+import Pagination from './Pagination';
+import { Table, Grid, Col, Row } from 'react-bootstrap';
 import { returnData, setData, returnJson } from '../../common/helper';
 import Moment from 'moment';
 import Axios from 'axios';
+
 
 export default class Member extends React.Component {
     constructor(props) {
@@ -35,12 +34,9 @@ export default class Member extends React.Component {
             result: [],
             currentPage: 1, //for pagination
             todosPerPage: 5 //for pagination
-            // activePage: 1,
-            // itemsCountPerPage:1,
-            // totalItemsCount:1
+
         }
-        // this.handlePageChange=this.handlePageChange.bind(this);
-        this.handleClick = this.handleClick.bind(this);//for pagination
+
     }
 
     componentWillMount() {
@@ -69,29 +65,10 @@ export default class Member extends React.Component {
         }));
     }
     //for pagination
-    handleClick(event) {
-        // /console.log(`active page is ${pageNumber}`);
-        this.setState({
-            currentPage: Number(event.target.id)
-        });
+    changeButtonState(event) {
+        console.log('active page is' + Number(event.target.id));
+        this.setState({ currentPage: Number(event.target.id) })
     }
-
-    // handlePageChange(pageNumber){
-    //     console.log(`active page is ${pageNumber}`);
-    //     this.setState({activePage: pageNumber});
-    //         // Axios.get('/../mockups/member.json').then((data) => this.setState({ 
-    //         returnJson("MemberDetails").then((data) => this.setState({ 
-    //         result:data,
-    //         activePage: pageNumber
-    //         // itemsCountPerPage:data.per_page,
-    //         // totalItemsCount:data.total,
-    //         // activePage:data.current_page
-    //     }));
-    //     console.log('judy test1' ,this.state.result);
-    //     console.log('judy test2', this.state.result.length)
-    //    // console.log("judy pagination".activePage);
-    // }
-
 
     render() {
         const { memberPlanId, result, currentPage, todosPerPage } = this.state;
@@ -132,23 +109,6 @@ export default class Member extends React.Component {
             </thead>
         </Table>)
 
-        const pageNumbers = [];
-        for (let i = 1; i <= Math.ceil(this.state.result.length / todosPerPage); i++) {
-            pageNumbers.push(i);
-        }
-
-        const renderPageNumbers = pageNumbers.map(number => {
-            return (
-                <Button
-                    key={number}
-                    id={number}
-                    onClick={this.handleClick}
-                >
-                    {number}
-                </Button>
-            );
-        });
-
 
         return (
             <div>
@@ -164,14 +124,15 @@ export default class Member extends React.Component {
                     <br />
                     <br />
                     {renderTodos}
-                    <Col md="10"></Col>
-                    <Col>
-                        <Link to={{ pathname: "memberDetails", state: this.state }}>Member Details</Link>
-                    </Col>
-                    <Col>
-                        <div id="page-numbers">
-                            {renderPageNumbers}</div>
-                    </Col>
+                    <div class="page-numbers">
+                        <Col>
+                            <Link to={{ pathname: "memberDetails", state: this.state }}>Member Details</Link>
+                        </Col>
+                        <Col>
+
+                            <Pagination result={this.state.result} buttonClick={this.changeButtonState.bind(this)} />
+
+                        </Col> </div>
                 </Grid>
             </div>
         )

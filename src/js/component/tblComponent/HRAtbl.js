@@ -6,6 +6,8 @@ const _ = require('lodash');
 import Moment from 'moment';
 import { Link } from 'react-router-dom';
 import { Table, Col } from 'react-bootstrap';
+import Pagination from '../Pagination';
+
 
 export default class HRAtbl extends React.Component {
 
@@ -13,21 +15,32 @@ export default class HRAtbl extends React.Component {
         super(props);
         this.state = {
             result: [],
-           
+            currentPage: 1, //for pagination
+            todosPerPage: 5 //for pagination
         }
+
     }
 
     componentWillMount() {
         console.log('Component Mount in HRAtbl');
         console.log(this.props);
-       // this.setState({ state: this.props });
+        // this.setState({ state: this.props });
+    }
+
+    changeButtonState(event) {
+        console.log('active page is' + Number(event.target.id));
+        this.setState({ currentPage: Number(event.target.id) })
     }
 
     render() {
+        const { currentPage, todosPerPage } = this.state;
+        const indexOfLastTodo = currentPage * todosPerPage;
+        const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
         var data = [];
         data = this.props.result;
-        console.log(data.result);  
-        return (
+        console.log(data.result);
+        const currentTodos = data.result.slice(indexOfFirstTodo, indexOfLastTodo);
+        return (<div>
             <Table responsive>
                 <thead>
                     <tr>
@@ -42,7 +55,7 @@ export default class HRAtbl extends React.Component {
                         <th>LOCATIONSOURCENM</th>
                     </tr>
                     {
-                        data.result.map(function (member, i) {
+                        currentTodos.map(function (member, i) {
                             return <tr><td>{member.HRAASSMNTID}</td>
                                 <td>{member.DATASOURCENM}</td>
                                 <td>{member.SURVEYNM}</td>
@@ -56,10 +69,16 @@ export default class HRAtbl extends React.Component {
                         })
                     }
                 </thead>
+            </Table>
+            <div class="page-numbers">
                 <Col>
                     <Link to={{ pathname: "memberDetails", state: this.props }}>Member Response</Link>
                 </Col>
-            </Table>
+                <Col>
+                    <Pagination result={data.result} buttonClick={this.changeButtonState.bind(this)} />
+                </Col></div>
+        </div>
+
         )
 
     }

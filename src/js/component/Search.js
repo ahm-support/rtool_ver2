@@ -8,6 +8,7 @@ import '../../css/Home.css';
 import {Link} from 'react-router-dom';
 import {Jumbotron, Grid, Row, Col, Image, Button} from 'react-bootstrap';
 import NavBar from "./NavBar";
+
 export default class Home extends React.Component {
     render() {
         console.log('Inside Home!!');
