@@ -6,11 +6,14 @@ require('es6-promise').polyfill();
 import fetch from 'isomorphic-fetch';
 import superagent from 'superagent';
 import co from 'co';
+_ = require('lodash');
+import Config from '../common/config.json';
 
 module.exports = {
     returnData,
     setData,
-    returnJson
+    returnComponentData,
+    getServiceUrl
 };
 
 
@@ -19,10 +22,11 @@ module.exports = {
  * */
 function returnData(urlName, url) {
     console.log(urlName, url);
+
     /* isomorphic-fetch code below*/
 
     let options = {
-        credentials: 'same-origin',
+        /*credentials: 'same-origin',*/
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -32,12 +36,10 @@ function returnData(urlName, url) {
     /* if (overideOptions != null)
      options = overideOptions;*/
     return co(function* () {
-        console.log('Inside returnData: ');
 
         var res = yield fetch(url, options);
         console.log('Inside returnData res: ', res);
         var json = yield res.json();
-        console.log('Inside returnData: ', json);
         return json;
     }).catch(
         () => console.log("Can’t access " + url + " response. Blocked by browser?")
@@ -64,9 +66,9 @@ function setError(payload) {
 }
 
 
-function returnJson(componentName) {
+function returnComponentData(componentName, memberPlanId) {
     console.log('In Helper' + componentName);
-    var jsonPath = getMockJsonfile(componentName);
+    var jsonPath = getServiceName(componentName, memberPlanId);
     // console.log(jsonPath);
 
     return co(function* () {
@@ -80,30 +82,58 @@ function returnJson(componentName) {
 
 }
 
-function getMockJsonfile(componentName) {
-    switch (componentName) {
-        case 'Health Assessments':
-            return require('../js/mockups/gethra.json');
-        case 'Trackers':
-            return require('../js/mockups/gettrackers.json');
-        case 'Health Actions':
-            return require('../js/mockups/gethealthaction.json');
-        case 'Reward':
-            return require('../js/mockups/getrewardsinfo.json');
-        case 'Incentive':
-            return require('../js/mockups/getIncentive.json');
-        case 'MemberDetails':
-            return require('../js/mockups/member.json');
-        case 'MemberResponse_HRA':
-            return require('../js/mockups/getmemberhraresponse.json');
-        case 'healthCheck':
-            return require('../js/mockups/member.json');
-        case 'behaviors':
-            return require('../js/mockups/behavior.json');
-        case 'goals':
-            return require('../js/mockups/goals.json');
-        case 'activities':
-            return require('../js/mockups/activity.json');
-    }
 
+
+// function getServiceName(componentName, memberID) {
+//     var restURL;
+//     console.log('getServiceName=' + componentName);
+//     switch (componentName) {
+
+//         case 'Health Assessments': {
+//             //return require('../js/mockups/gethra.json');
+//             restURL = `http://${Config.hostUrl}${Config.mahServices.HealthAssessments}?app-id=${Config.appId}&memberId=${memberID}`;
+//             return restURL;
+//         }
+//         case 'Trackers':
+//             return require('../js/mockups/gettrackers.json');
+//             // restURL=`http://${Config.hostUrl}${Config.mahServices.Trackers}?app-id=${Config.appId}&memberId=${memberId}`;
+//             // return restURL;
+//         case 'Health Actions':
+//             return require('../js/mockups/gethealthaction.json');
+//         case 'Reward':
+//             return require('../js/mockups/getrewardsinfo.json');
+//         case 'Incentives':
+//             return require('../js/mockups/getIncentives.json');
+//         // case 'Incentives':
+//         // restURL = `http://${Config.hostUrl}${Config.mahServices.Incentives}?app-id=${Config.appId}&memberId=${memberID}`;
+//         // return restURL;
+//         case 'MemberDetails':
+//             return require('../js/mockups/member.json');
+//         case 'MemberHRAResponse':
+//             return require('../js/mockups/getmemberhraresponse.json');
+//         case 'healthCheck':
+//             return require('../js/mockups/member.json');
+//         case 'behaviors':
+//             return require('../js/mockups/behavior.json');
+//         case 'goals':
+//             return require('../js/mockups/goals.json');
+//         case 'activities':
+//             return require('../js/mockups/activity.json');
+//     }
+
+
+function getServiceUrl(componentName, memberId) {
+
+    console.log('componentName: ' + componentName);
+    console.log('memberId: ' + memberId);
+    const mahService = getServiceName(componentName);
+    console.log('mahService: ', mahService);
+
+    return `http://${Config.hostUrl}${mahService}?app-id=${Config.appId}&memberId=${memberId}`;
 }
+
+function getServiceName(componentName) {
+    return _.get(Config, `mahServices[${componentName}]`)
+}
+
+// }

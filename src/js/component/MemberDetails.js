@@ -22,18 +22,24 @@ export default class MemberDetails extends React.Component {
     constructor(props) {
         super(props);
 
-        let memberPlanId;
+        let primaryMemberPlanID, memberID;
         if (history.state.state.type) {
-            memberPlanId = history.state.state.memberPlanId;
-            console.log('MemberDetails memberPlanId - ', memberPlanId);
+            console.log(history.state);
+            primaryMemberPlanID = history.state.state.primaryMemberPlanID;
+            memberID = history.state.state.memberID;
+            console.log('MemberDetails memberPlanId - ', memberID);
         } else {
             const result = history.state.state;
-            memberPlanId = result.result.PRIMARYMEMBERPLANID;
+            primaryMemberPlanID = result.result.primaryMemberPlanID;
+            memberID = history.state.state.memberID;
             console.log('State::: ', history.state.state);
         }
-        console.log('Inside MemberDetails:: ', history.state.state.memberPlanId);
+        console.log('Inside MemberDetails:: ', history.state.state.primaryMemberPlanID);
         this.state = {
-            memberPlanId: history.state.state.memberPlanId,
+            primaryMemberPlanID: history.state.state.primaryMemberPlanID,
+            memberID: history.state.state.memberID,
+            aetnaCumbId: history.state.state.aetnaCumbId,
+            memberPlanId : history.state.state.memberPlanId
         };
     }
     render() {
@@ -46,6 +52,9 @@ export default class MemberDetails extends React.Component {
                         <Col xs={6} md={3}><h2>Dashboard</h2>
                             <p>Health Recommendation for member</p>
                         </Col>
+                        <Col xs={6} md={1}>
+                        <Image title="Back" src="../../../images/brokenArrowBack.jpg" style={{ width: 40, height: 40 }} />
+                        </Col>
                     </Row>
                     <br />
                     <br />
@@ -54,14 +63,14 @@ export default class MemberDetails extends React.Component {
                         <Col md={1}></Col>
                         <Col md={4}><Link to={{
                             pathname: '/member',
-                            state: { memberPlanId: this.state.memberPlanId, type: 'return' }
-                        }}><Image title="Back" src="../../../images/brokenArrowBack.jpg" style={{ width: 40, height: 40 }} /></Link></Col>
+                            state: { aetnaCumbId: this.state.aetnaCumbId, type: 'return' }
+                        }}></Link></Col>
 
-                        <Col md={4}></Col>
+                        {/* <Col md={4}></Col>
                         <Col><Link to={{
                             pathname: '/dc',
-                            state: { memberPlanId: this.state.memberPlanId }
-                        }}><Image title="Digital Coaching" src="../../../images/brokenArrow.jpg" style={{ width: 40, height: 40 }} /></Link></Col>
+                            state: { memberID: this.state.memberID }
+                        }}><Image title="Digital Coaching" src="../../../images/brokenArrow.jpg" style={{ width: 40, height: 40 }} /></Link></Col> */}
                     </Row>
                     <hr />
                     <Row>
@@ -70,7 +79,7 @@ export default class MemberDetails extends React.Component {
                             <Thumbnail title="Monitered Events" src="../../../images/clock.png" />
                             <h4><Link to={{
                                 pathname: '/service',
-                                state: { memberPlanId: this.state.memberPlanId, name: 'Health Actions' }
+                                state: { memberID: this.state.memberID, name: 'HealthActions' }
                             }}>Health Actions</Link></h4>
                             <p>Description</p>
                         </Col>
@@ -79,7 +88,7 @@ export default class MemberDetails extends React.Component {
                             <Thumbnail title="HRA" alt="80x80" src="../../../images/Human.png" />
                             <h4><Link to={{
                                 pathname: '/service',
-                                state: { memberPlanId: this.state.memberPlanId, name: 'Health Assessments' }
+                                state: { memberID: this.state.memberID, name: 'HealthAssessments' }
                             }}>HRA</Link></h4>
                             <p>Description</p>
                         </Col>
@@ -88,7 +97,7 @@ export default class MemberDetails extends React.Component {
                             <Thumbnail title="Rewards" alt="80x80" src="../../../images/heart.png" />
                             <h4><Link to={{
                                 pathname: '/service',
-                                state: { memberPlanId: this.state.memberPlanId, name: 'Reward' }
+                                state: { memberID: this.state.memberID, name: 'Reward' }
                             }}>Rewards</Link></h4>
 
                             <p>Description</p>
@@ -98,19 +107,19 @@ export default class MemberDetails extends React.Component {
                     <Row>
                         <Col xs={6} md={2}></Col>
                         <Col xs={6} md={1}>
-                            <Thumbnail title="Incentive" src="../../../images/incentives.png" />
+                            <Thumbnail title="Incentives" src="../../../images/Hand-with-Trophy-Icon.png" />
                             <h4><Link to={{
                                 pathname: '/service',
-                                state: { memberPlanId: this.state.memberPlanId, name: 'Incentive' }
-                            }}>Incentives</Link></h4>
+                                state: { memberID: this.state.primaryMemberPlanID, name: 'Rewards Center' }
+                            }}>Reward Center</Link></h4>
                             <p>Description</p>
                         </Col>
                         <Col xs={6} md={2}></Col>
                         <Col xs={6} md={1}>
-                            <Thumbnail title="Heart Balance" alt="80x80" src="../../../images/heart.png" />
+                            <Thumbnail title="Heart Balance" alt="80x80" src="../../../images/trackers.png" />
                             <h4><Link to={{
-                                pathname: "Trackers",
-                                state: { memberPlanId: this.state.memberPlanId }
+                                pathname: "/service",
+                                state: { memberID: this.state.memberID, name: 'Health Trackers' }
 
                             }}>Trackers</Link></h4>
                             <p>Description</p>
@@ -120,7 +129,7 @@ export default class MemberDetails extends React.Component {
                             <Thumbnail title="Sweepstakes" alt="80x80" src="../../../images/sweepstakes.jpg" />
                             <h4><Link to={{
                                 pathname: '/service',
-                                state: { memberPlanId: this.state.memberPlanId, name: 'SWEEPSTAKES' }
+                                state: { memberID: this.state.memberID, name: 'SWEEPSTAKES' }
                             }}>Sweepstakes</Link></h4>
                             <p>Description</p>
                         </Col>

@@ -14,13 +14,13 @@ class SearchMain extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            memberPlanId: ''
+            aetnaCumbId: ''
         }
     }
     handleSubmit(e){
-        const memberPlanId = this.state.memberPlanId;
+        const aetnaCumbId = this.state.aetnaCumbId;
         e.preventDefault();
-        this.props.history.push('/member', memberPlanId);
+        this.props.history.push('/member', aetnaCumbId);
     };
 
     render(){
@@ -35,7 +35,7 @@ class SearchMain extends React.Component {
                             <Col md="4"></Col>
                                 <Col md="4"><ControlLabel align="center"><h3>Enter Aetna CumbId: </h3></ControlLabel></Col></Row>
                             <Row><Col md="3"></Col>
-                                <Col md="5"><FormControl type="text" name="search" placeholder="Enter here..." onChange = {e => this.setState({memberPlanId: e.target.value})}/></Col></Row>
+                                <Col md="5"><FormControl type="text" name="search" placeholder="Enter here..." onChange = {e => this.setState({aetnaCumbId: e.target.value})}/></Col></Row>
                         <FormControl.Feedback />
                     </FormGroup>
                     <Row>

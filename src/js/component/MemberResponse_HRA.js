@@ -27,7 +27,7 @@ import {
 } from 'react-bootstrap';
 import View from './data/DataView';
 import Config from '../../common/config.json';
-import { returnData, setData, returnJson } from '../../common/helper';
+import { returnData, setData, returnComponentData } from '../../common/helper';
 import {Sidebar, SidebarItem, Link} from 'react-router-dom';
 import Moment from 'moment';
 

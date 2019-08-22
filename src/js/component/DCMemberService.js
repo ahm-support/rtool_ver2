@@ -30,7 +30,7 @@ import {
 import NavBar from "./NavBar";
 import View from './data/DataView';
 import Config from '../../common/config.json';
-import { returnData, setData, returnJson } from '../../common/helper';
+import { returnData, setData, returnComponentData } from '../../common/helper';
 export default class DCMemberService extends React.Component {
     constructor(props) {
         super(props);
@@ -102,7 +102,7 @@ export default class DCMemberService extends React.Component {
 
         //const restURL = 'http://incentives.azprd.ahmcert.com/incentivesweb/incentives/EN/memberPlan/1630087942?processingDate=';
         // returnData('fetchData', restURL).then((data) => this.setState({result: data, memberPlanId: memberPlanId, componentName: componentName}));
-        returnJson(componentName).then((data) => this.setState({ result: data, memberPlanId: memberPlanId, componentName: componentName }));
+        returnComponentData(componentName).then((data) => this.setState({ result: data, memberPlanId: memberPlanId, componentName: componentName }));
 
     }
 

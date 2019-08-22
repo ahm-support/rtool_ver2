@@ -31,7 +31,7 @@ import {
 } from 'react-bootstrap';
 import View from './data/DataView';
 import Config from '../../common/config.json';
-import { returnData, setData, returnJson } from '../../common/helper';
+import { returnData, setData, returnComponentData } from '../../common/helper';
 import {Sidebar, SidebarItem, Link} from 'react-router-dom';
 import Moment from 'moment';
 
@@ -78,7 +78,7 @@ export default class Trackers extends React.Component {
         //  const restURL = `http://${Config.hostUrl}:${Config.port}${Config.mahServices.member}?app-id=${Config.appId}&memberId=${memberPlanId}`;
         //returnData('fetchData', restURL).then((data) => this.setState({result: data}));
        // axios('https://api.myjson.com/bins/l5pw3')
-        returnJson("Trackers")
+       returnComponentData("Trackers")
         .then((response) => { 
 
             // this.setState({

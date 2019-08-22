@@ -19135,7 +19135,7 @@
       <find>log</find>
       <find>fetchData</find>
       <find>returnData</find>
-       <find>returnJson</find>
+       <find>returnComponentData</find>
       <find>memberplanId</find>
       <find>pathname</find>
       <find>handleClick</find>

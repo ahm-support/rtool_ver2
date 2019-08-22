@@ -1,0 +1,46 @@
+
+.jumbotron {
+    padding: 5em inherit;
+    background-color:light grey !important;
+    
+}
+
+.column {
+    float: left;
+
+    padding:10px;
+    height:100px;
+}
+
+.row:after {
+    content:"";
+    display: table;
+    clear:both;
+}
+
+.title1 {
+    text-align: left;
+    color: #269CEB;
+    margin-top: 0px;
+    float: left;
+    clear: both;
+  }
+  
+  .title2 {
+    text-align: left;
+    color: #269CEB;
+    clear : both;
+  }
+
+  .title3 {
+    text-align: left;
+    color: #269CEB
+  }
+
+  .verticalLine {
+    border-left: thick solid white;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+
+  }
